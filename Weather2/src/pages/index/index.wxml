@@ -1,0 +1,51 @@
+<view class="container" style="background-image: url(../../image/bg.jpg); height: {{600}}px">
+<loading hidden="{{loading}}">加载天气...</loading>
+<view class="newTopView">
+<!--左边添加当前城市名字，点击跳转选择城市 右边添加刷新当前天气-->
+</view>
+  <view class="topView">
+  <!--当前城市-->
+    <text class="centerItemText" style="margin-left: 10px;font-size:30px">{{city}}</text> 
+    <view class="degreeView">
+    <!--当前温度-->
+      <text class="degree">{{currentTemperature}}</text>
+      <!--度数图标-->
+      <image class="circle" src="../../image/circle.png"></image>
+    </view>
+    <view class="detailInfo">
+      <view class="degreeView">
+      <!--夜间天气情况-->
+        <text class="detailInfoDegree">{{nightAirTemperature}}</text>
+        <image class="detailInfoCircle" src="../../image/circle.png" />
+        <text class="detailInfoLine">/</text>
+        <!--白天天气-->
+        <text class="detailInfoDegree">{{dayAirTemperature}}</text>
+        <!-- style优先级比class高会覆盖class中相同属性 -->
+        <image class="detailInfoCircle" style="margin-left: 57rpx; margin-right: 40rpx" src="../../image/circle.png" />
+        <!-- 当前天气名字 -->
+        <text class="detailInfoName">{{weather}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 中间部分 -->
+  <view class="centerView">
+    <view class="centerItem" style="margin-right: 25rpx;">
+      <image class="centerItemImage" src="../../image/leaf.png" />
+      <!-- 相同属性抽出来！ -->
+      <!--污染指数-->
+      <text class="centerItemText" style="margin-left: 10rpx; margin-right: 10rpx">{{aqi}}</text>
+      <!--污染指数对应name-->
+      <text class="centerItemText">{{quality}}</text>
+    </view>
+    <view class="centerItem" style="margin-left: 25rpx">
+      <image class="centerItemImage" src="../../image/wind.png" />
+      <text class="centerItemText" style="margin-left: 10rpx; margin-right: 10rpx">{{windPower}}</text>
+      <!--风-->
+      <text class="centerItemText">{{windDirection}}</text>
+      
+    </view>
+  </view>
+  <!-- 底部view -->
+  <view class="bottomView">
+  </view>
+</view>
